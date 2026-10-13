@@ -108,7 +108,7 @@ export function Dashboard() {
         )}
         <p>
           Built with Rust (Axum, Tokio, SQLite) and TypeScript (React).{' '}
-          <a href="https://github.com/llpranjal/tessera" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a href="https://github.com/llpranjal/collaborative-canvas-editor" target="_blank" rel="noreferrer">Source on GitHub</a>
         </p>
       </footer>
     </div>

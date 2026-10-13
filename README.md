@@ -1,4 +1,4 @@
-# Tessera
+# Collaborative Canvas Editor (Tessera)
 
 A real-time multiplayer design canvas. Several people edit the same file at once, see each
 other's cursors and selections live, and always end up with an identical document.
