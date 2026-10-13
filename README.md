@@ -13,6 +13,8 @@ cargo run (server/)  +  npm run dev (web/)  →  http://localhost:5173
 Open a file in two windows, or press **Add demo bot** to invite a scripted collaborator that
 connects over its own WebSocket and edits alongside you.
 
+![Tessera editor with the demo bot's live cursor, the layers panel, and the presence panel](docs/screenshot.png)
+
 ---
 
 ## Features
