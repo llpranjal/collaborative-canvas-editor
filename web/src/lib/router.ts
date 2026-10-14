@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react'
 
-const EVENT = 'tessera:navigate'
+const EVENT = 'collaborative-canvas:navigate'
 
 export function navigate(path: string) {
   if (path === location.pathname) return

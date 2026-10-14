@@ -7,8 +7,8 @@ const DIGITS: &[u8] = b"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrst
 
 pub fn welcome() -> Doc {
     let mut nodes: Vec<Value> = vec![
-        json!({"type":"text","name":"Title","x":80,"y":72,"w":760,"h":68,"text":"Welcome to Tessera","fontSize":60,"fontWeight":700,"fill":"#161A23"}),
-        json!({"type":"path","name":"Underline","x":84,"y":146,"w":520,"h":22,"stroke":"#2B3BEA","strokeWidth":6,
+        json!({"type":"text","name":"Title","x":80,"y":72,"w":760,"h":68,"text":"Welcome to the canvas","fontSize":60,"fontWeight":700,"fill":"#161A23"}),
+        json!({"type":"path","name":"Underline","x":84,"y":146,"w":600,"h":22,"stroke":"#2B3BEA","strokeWidth":6,
                "points":[[0,0.6],[0.12,0.3],[0.25,0.7],[0.4,0.35],[0.55,0.75],[0.7,0.3],[0.85,0.65],[1,0.4]]}),
         json!({"type":"text","name":"Intro","x":80,"y":196,"w":640,"h":60,"text":"A multiplayer design canvas. Open this file in a second window and watch shapes, cursors, and selections sync in real time.","fontSize":20,"fontWeight":450,"fill":"#5B6272"}),
     ];

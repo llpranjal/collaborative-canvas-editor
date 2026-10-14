@@ -19,13 +19,13 @@ export function Dashboard() {
       setStats(s)
       setError(null)
     } catch {
-      setError("Can't reach the Tessera server. Check that it's running on port 8787, then reload.")
+      setError("Can't reach the canvas server. Check that it's running on port 8787, then reload.")
     }
   }, [])
 
   // Poll so live editor counts stay current.
   useEffect(() => {
-    document.title = 'Files – Tessera'
+    document.title = 'Files – Collaborative Canvas Editor'
     refresh()
     const t = setInterval(refresh, 4000)
     return () => clearInterval(t)
@@ -49,7 +49,7 @@ export function Dashboard() {
       <header className="dash-top">
         <div className="wordmark">
           <Logo size={26} />
-          <span>Tessera</span>
+          <span>Collaborative Canvas Editor</span>
         </div>
         <NameChip />
       </header>
@@ -58,7 +58,7 @@ export function Dashboard() {
         <div className="hero-copy">
           <h1>Design together, in the same file, at the same time.</h1>
           <p>
-            Tessera is a multiplayer canvas. Every edit travels through a Rust server that puts it in order and sends it
+            This is a multiplayer canvas editor. Every edit travels through a Rust server that puts it in order and sends it
             to everyone else in the file, so all collaborators end up with the same picture.
           </p>
         </div>

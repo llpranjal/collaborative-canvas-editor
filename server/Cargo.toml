@@ -1,9 +1,9 @@
 [package]
-name = "tessera-server"
+name = "collaborative-canvas-server"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.84"
-description = "Authoritative multiplayer server for the Tessera collaborative canvas"
+description = "Authoritative multiplayer server for the Collaborative Canvas Editor"
 license = "MIT"
 
 [dependencies]

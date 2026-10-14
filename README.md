@@ -1,4 +1,4 @@
-# Collaborative Canvas Editor (Tessera)
+# Collaborative Canvas Editor
 
 A real-time multiplayer design canvas. Several people edit the same file at once, see each
 other's cursors and selections live, and always end up with an identical document.
@@ -13,7 +13,7 @@ cargo run (server/)  +  npm run dev (web/)  →  http://localhost:5173
 Open a file in two windows, or press **Add demo bot** to invite a scripted collaborator that
 connects over its own WebSocket and edits alongside you.
 
-![Tessera editor with the demo bot's live cursor, the layers panel, and the presence panel](docs/screenshot.png)
+![The editor with the demo bot's live cursor and selection, the layers panel, and the presence panel](docs/screenshot.png)
 
 ---
 
@@ -135,7 +135,7 @@ cd web && npm test               # 26 tests
 **Development** (hot reload; Vite proxies `/api` and `/ws` to the server):
 
 ```bash
-cd server && cargo run          # :8787, creates tessera.db with a welcome file
+cd server && cargo run          # :8787, creates canvas.db with a welcome file
 cd web && npm install && npm run dev   # :5173
 ```
 
@@ -149,11 +149,11 @@ cd server && cargo run --release        # http://localhost:8787
 **Docker:**
 
 ```bash
-docker build -t tessera .
-docker run -p 8787:8787 -v tessera-data:/data tessera
+docker build -t collaborative-canvas-editor .
+docker run -p 8787:8787 -v canvas-data:/data collaborative-canvas-editor
 ```
 
-Configuration: `PORT` (8787), `TESSERA_DB` (`tessera.db`), `TESSERA_STATIC` (`../web/dist`),
+Configuration: `PORT` (8787), `CANVAS_DB` (`canvas.db`), `CANVAS_STATIC` (`../web/dist`),
 `RUST_LOG`.
 
 ## Layout

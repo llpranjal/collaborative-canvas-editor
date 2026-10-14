@@ -251,7 +251,7 @@ function Editor({ client, docId }: { client: SyncClient; docId: string }) {
   }, [client, history, commit, zoomBy, startEditing])
 
   useEffect(() => {
-    document.title = snap.docName ? `${snap.docName} – Tessera` : 'Tessera'
+    document.title = snap.docName ? `${snap.docName} – Collaborative Canvas Editor` : 'Collaborative Canvas Editor'
   }, [snap.docName])
 
   const toggleBot = () => {

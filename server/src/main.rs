@@ -1,8 +1,8 @@
+use collaborative_canvas_server::{app, seed_if_empty, spawn_flusher, Hub, Store};
 use std::net::SocketAddr;
 use std::path::PathBuf;
 use std::sync::Arc;
 use std::time::Duration;
-use tessera_server::{app, seed_if_empty, spawn_flusher, Hub, Store};
 use tower_http::trace::TraceLayer;
 use tracing_subscriber::EnvFilter;
 
@@ -18,9 +18,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .ok()
         .and_then(|p| p.parse().ok())
         .unwrap_or(8787);
-    let db_path = std::env::var("TESSERA_DB").unwrap_or_else(|_| "tessera.db".into());
+    let db_path = std::env::var("CANVAS_DB").unwrap_or_else(|_| "canvas.db".into());
     let static_dir =
-        PathBuf::from(std::env::var("TESSERA_STATIC").unwrap_or_else(|_| "../web/dist".into()));
+        PathBuf::from(std::env::var("CANVAS_STATIC").unwrap_or_else(|_| "../web/dist".into()));
 
     let store = Store::open(&db_path)?;
     seed_if_empty(&store)?;
@@ -30,7 +30,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let router = app(hub.clone(), Some(&static_dir)).layer(TraceLayer::new_for_http());
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
     let listener = tokio::net::TcpListener::bind(addr).await?;
-    tracing::info!("tessera listening on http://localhost:{port} (db: {db_path})");
+    tracing::info!(
+        "collaborative-canvas-server listening on http://localhost:{port} (db: {db_path})"
+    );
 
     // WebSockets never close on their own, so rather than waiting for them we
     // stop on a signal, persist every open document, and exit. Clients reconnect

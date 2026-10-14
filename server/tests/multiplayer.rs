@@ -2,13 +2,13 @@
 
 use axum::body::Body;
 use axum::http::{Request, StatusCode};
+use collaborative_canvas_server::{app, Hub, Store};
 use futures_util::{SinkExt, StreamExt};
 use http_body_util::BodyExt;
 use serde_json::{json, Value};
 use std::net::SocketAddr;
 use std::sync::Arc;
 use std::time::Duration;
-use tessera_server::{app, Hub, Store};
 use tokio::net::TcpStream;
 use tokio_tungstenite::tungstenite::Message;
 use tokio_tungstenite::{MaybeTlsStream, WebSocketStream};

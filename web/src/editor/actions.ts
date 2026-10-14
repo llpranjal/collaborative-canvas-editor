@@ -67,7 +67,7 @@ export function selectedProps(views: NodeView[], selection: string[], get: (id: 
   return views.filter((v) => sel.has(v.id)).flatMap((v) => (get(v.id) ? [get(v.id)!] : []))
 }
 
-const CLIP_TYPE = 'tessera/nodes'
+const CLIP_TYPE = 'collaborative-canvas/nodes'
 
 export function toClipboard(props: Props[]): string {
   return JSON.stringify({ type: CLIP_TYPE, nodes: props })

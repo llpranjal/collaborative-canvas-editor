@@ -1,4 +1,4 @@
-const KEY = 'tessera.name'
+const KEY = 'collaborative-canvas.name'
 
 const ADJECTIVES = ['Amber', 'Brisk', 'Cobalt', 'Dapper', 'Eager', 'Fern', 'Gentle', 'Hazel', 'Indigo', 'Jolly', 'Keen', 'Lunar', 'Mellow', 'Nimble', 'Opal', 'Plucky', 'Quiet', 'Rosy', 'Sunny', 'Tidy', 'Velvet', 'Witty']
 const ANIMALS = ['Otter', 'Heron', 'Lynx', 'Marten', 'Finch', 'Badger', 'Koi', 'Puffin', 'Ibex', 'Wren', 'Gecko', 'Tapir', 'Moth', 'Quokka', 'Seal', 'Vole']

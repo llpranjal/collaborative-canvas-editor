@@ -31,7 +31,7 @@ pub fn seed_if_empty(store: &Store) -> rusqlite::Result<()> {
         let doc = seed::welcome();
         store.create(
             &api::new_id(),
-            "Welcome to Tessera",
+            "Welcome to the canvas",
             &doc.to_json(),
             doc.len(),
         )?;
